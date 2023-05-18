@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 
+
 public class WordProgram implements ActionListener {
     JFrame frame;
 
@@ -12,6 +13,9 @@ public class WordProgram implements ActionListener {
     JPanel buttonPanel;
 
     JPanel buttonPanel2;
+
+
+    JComboBox dropBox1,dropBox2,dropBox3,dropBox4,dropBox5;
 
     JButton addBulletButton, removeBulletButton,boldButton, italicizeButton,underlineButton;
 
@@ -29,35 +33,42 @@ public class WordProgram implements ActionListener {
         buttonPanel = new JPanel();
         frame.add(buttonPanel, BorderLayout.NORTH);
 
+
+        String l1[]={"10","12","18"};
         label = new JLabel("Text Size");
         buttonPanel.add(label);
 
-        textField1 = new JTextField(5);
-        buttonPanel.add(textField1);
+        dropBox1 = new JComboBox(l1);
+        buttonPanel.add(dropBox1);
 
+        String l2[]={"Arial","Century Gothic","AmerType","Times New Roman"};
         label = new JLabel("Text Font");
         buttonPanel.add(label);
 
-        textField2 = new JTextField(5);
-        buttonPanel.add(textField2);
+        dropBox2 = new JComboBox(l2);
+        buttonPanel.add(dropBox2);
 
+        String l3[]={"Right","middle","left"};
         label = new JLabel("Alignment");
         buttonPanel.add(label);
 
-        textField3 = new JTextField(5);
-        buttonPanel.add(textField3);
+        dropBox3 = new JComboBox(l3);
+        buttonPanel.add(dropBox3);
 
+
+        String l4[]={"Black","Red","Yellow","Blue","Green","Orange","Pink","Purple"};
         label = new JLabel("Color");
         buttonPanel.add(label);
 
-        textField4 = new JTextField(5);
-        buttonPanel.add(textField4);
+        dropBox4 = new JComboBox(l4);
+        buttonPanel.add(dropBox4);
 
+        String l5[]={"Black","Red","Yellow","Blue","Green","Orange","Pink","Purple"};
         label = new JLabel("Highlighter");
         buttonPanel.add(label);
 
-        textField5 = new JTextField(5);
-        buttonPanel.add(textField5);
+        dropBox5 = new JComboBox(l5);
+        buttonPanel.add(dropBox5);
 
         //Buttons:
         buttonPanel2 = new JPanel();
@@ -103,6 +114,9 @@ public class WordProgram implements ActionListener {
             setBackground(Color.WHITE);
 
     }
+        public void setMode(String mode) {
+            this.mode = mode;
+        }
 
 
     }
