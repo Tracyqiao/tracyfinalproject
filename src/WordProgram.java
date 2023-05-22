@@ -2,13 +2,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 
 public class WordProgram implements ActionListener {
     JFrame frame;
 
-    TextPanel dPanel;
+    JTextArea textArea = new JTextArea(1000,900);
+    private int width = 1280, height = 980;
+    private JScrollPane scrollbar = new JScrollPane(textArea);
+    private int textHeight = 12;
+    private Font currentFont = new Font(Font.SANS_SERIF, 2, textHeight);
 
     JPanel buttonPanel;
 
@@ -20,14 +25,10 @@ public class WordProgram implements ActionListener {
     JButton addBulletButton, removeBulletButton,boldButton, italicizeButton,underlineButton;
 
     private JLabel label;
-    private JTextField textField1, textField2,textField3,textField4,textField5;
 
     public WordProgram(){
         frame = new JFrame("Word Document Program");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        dPanel = new TextPanel();
-        frame.add(dPanel);
 
 
         buttonPanel = new JPanel();
@@ -107,15 +108,33 @@ public class WordProgram implements ActionListener {
     public static void main(String[] args) {
         WordProgram x = new WordProgram();
     }
-    class TextPanel extends JPanel{
+    class textArea extends JPanel{
 
         private String mode;
-        public TextPanel(){
+
+        public textArea(){
             setBackground(Color.WHITE);
 
     }
         public void setMode(String mode) {
             this.mode = mode;
+        }
+        public void mousePressed(MouseEvent e){
+            if(mode.equals("Add Bullets")){
+
+            }
+            if(mode.equals("Remove Bullets")){
+
+            }
+            if(mode.equals("Bold")){
+
+            }
+            if(mode.equals("Italicize")){
+
+            }
+            if(mode.equals("Underline")){
+
+            }
         }
 
 
