@@ -1,0 +1,16 @@
+The project is a word processor inspired by Microsoft WORD, pages and google doc.
+Basic functions includes: Type and write.
+                          Color selection, size selection, font selection.
+                          Formation.
+                          Italicize, underline, bold.
+                          Word counter.
+Click on each button when you want to implement the function, the word count counts it self.
+
+Sources:
+https://docs.oracle.com/javase/8/docs/api/javax/swing/text/StyledEditorKit.html
+https://docs.oracle.com/javase/8/docs/api/java/awt/GraphicsEnvironment.html
+https://docs.oracle.com/javase/8/docs/api/javax/swing/text/TextAction.html
+https://docs.oracle.com/javase/tutorial/uiswing/components/toolbar.html
+https://docs.oracle.com/javase/tutorial/uiswing/components/combobox.html
+
+
